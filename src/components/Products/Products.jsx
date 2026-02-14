@@ -28,7 +28,7 @@ const Products = () => {
                     {
                         categories.map(category => {
                             return (
-                                <button key={category} className={`px-5 py-2 rounded-lg cursor-pointer ${activeTab == category ? 'bg-gradient-to-b from-orange-400 to-orange-500 text-white' : 'bg-zinc-100'}`}
+                                <button key={category} className={`md:px-5 px-3 md:py-2 py-2 md:text-lg text-sm rounded-lg cursor-pointer ${activeTab == category ? 'bg-gradient-to-b from-orange-400 to-orange-500 text-white' : 'bg-zinc-100'}`}
                                     onClick={() => setActiveTab(category)}
                                 >
                                     {category}
@@ -39,7 +39,7 @@ const Products = () => {
                 </div>
 
                 {/* product listing */}
-                <div className='grid grid-cols-4 gap-9 mt-10'>
+                <div className='grid md:grid-cols-4 grid-cols-2 gap-9 mt-10'>
                     {renderCard}
                 </div>
 
